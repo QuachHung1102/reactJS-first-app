@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import TabButton from "./components/TabButton";
+import TicTacToe from "./components/Tic-Tac-Toe";
 
 import "./App.css";
 import "./styles.css";
@@ -137,6 +138,9 @@ export default function App() {
           </pre>
         </div>
       </section>
+      <div>
+        <TicTacToe></TicTacToe>
+      </div>
     </div>
   );
 }
