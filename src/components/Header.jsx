@@ -14,7 +14,6 @@ function Header() {
     <header>
       {/* <img src="logo192.png" className="App-logo" alt="React logo" /> */}
       <img src={logo192} className="App-logo" alt="React logo" />
-
       <div>
         <h1>React.js</h1>
         <p>i.e., using the React library for rendering the UI</p>
