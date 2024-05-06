@@ -31,6 +31,28 @@ header p {
   color: #82c2ce;
 }
 
+code {
+  font-size: 1.2em;
+}
+
+ul {
+  padding-inline-start: 20px;
+}
+
+button {
+  margin: 5px;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
 #tabs {
   max-width: 31rem;
   margin: 2rem 0;
@@ -78,7 +100,7 @@ header p {
   text-align: center;
 }
 
-.game-board{
+.game-board {
   margin: 1em 0;
 }
 
@@ -116,4 +138,9 @@ header p {
 
 .game-info {
   margin-left: 20px;
+}
+
+.taskApp {
+  display: flex;
+  justify-content: center;
 }

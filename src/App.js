@@ -2,46 +2,12 @@ import { useState } from "react";
 import Header from "./components/Header";
 import TabButton from "./components/TabButton";
 import TicTacToe from "./components/Tic-Tac-Toe";
+import CoreConcept from "./components/CoreConcept";
+import TaskApp from "./components/Task";
 
 import "./App.css";
 import "./styles.css";
-import { CORE_CONCEPTS, EXAMPLES } from "./data";
-
-const content = [
-  [
-    "React is extremely popular",
-    "It makes building complex, interactive UIs a breeze",
-    "It's powerful & flexible",
-    "It has a very active and versatile ecosystem",
-  ],
-  [
-    "Components, JSX & Props",
-    "State",
-    "Hooks (e.g., useEffect())",
-    "Dynamic rendering",
-  ],
-  [
-    "Official web page (react.dev)",
-    "Next.js (Fullstack framework)",
-    "React Native (build native mobile apps with React)",
-  ],
-  [
-    "Vanilla JavaScript requires imperative programming",
-    "Imperative Programming: You define all the steps needed to achieve a result",
-    "React on the other hand embraces declarative programming",
-    "With React, you define the goal and React figures out how to get there",
-  ],
-];
-
-function CoreConcept({ img, title, description }) {
-  return (
-    <li>
-      <img src={img} className="" alt={title} />
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </li>
-  );
-}
+import { CORE_CONCEPTS, EXAMPLES, CONTENTS } from "./data";
 
 export default function App() {
   const [activeContentIndex, setActiveContentIndex] = useState(0);
@@ -83,7 +49,7 @@ export default function App() {
         </menu>
         <div id="tab-content">
           <ul>
-            {content[activeContentIndex].map((item) => (
+            {CONTENTS[activeContentIndex].map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
@@ -95,10 +61,6 @@ export default function App() {
           {CORE_CONCEPTS.map((coreConcep) => {
             return <CoreConcept {...coreConcep} key={coreConcep.title} />;
           })}
-          {/* <CoreConcept {...CORE_CONCEPTS[0]} />
-          <CoreConcept {...CORE_CONCEPTS[1]} />
-          <CoreConcept {...CORE_CONCEPTS[2]} />
-          <CoreConcept {...CORE_CONCEPTS[3]} /> */}
         </ul>
       </section>
       <section id="examples">
@@ -143,6 +105,11 @@ export default function App() {
       </section>
       <div>
         <TicTacToe></TicTacToe>
+      </div>
+      <div className="taskApp">
+        <div>
+          <TaskApp />
+        </div>
       </div>
     </div>
   );
